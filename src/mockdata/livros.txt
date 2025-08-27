@@ -1,0 +1,3 @@
+titulo;autor;ano;status;dataTerminoEmprestimo
+Senhor dos aneis;Tolkien;1994;disponivel;
+Percy Jackson;Rick Riordan;2005;emprestado;2025-08-28
