@@ -22,6 +22,7 @@ public class LibraryManager {
             try {
                 FileManager.logOperation("Adição de Livro - Título: " + book.getTitle() + 
                                       " (Código: " + book.getCode() + ") adicionado ao sistema");
+                FileManager.saveBooks(getAllBooks()); // Salva imediatamente após adicionar
             } catch (IOException e) {
                 System.out.println("Erro ao registrar operação no log: " + e.getMessage());
             }
@@ -56,6 +57,7 @@ public class LibraryManager {
                 FileManager.logOperation("Adição de Estudante - Nome: " + student.getName() + 
                                       " (RA: " + student.getAcademicRegistration() + 
                                       ", Curso: " + student.getCourse() + ") adicionado ao sistema");
+                FileManager.saveStudents(getAllStudents()); // Salva imediatamente após adicionar
             } catch (IOException e) {
                 System.out.println("Erro ao registrar operação no log: " + e.getMessage());
             }
@@ -83,6 +85,8 @@ public class LibraryManager {
                 try {
                     FileManager.logOperation("Empréstimo - Livro: " + book.getTitle() + " (Código: " + book.getCode() + 
                                           ") emprestado para estudante: " + student.getName() + " (RA: " + student.getAcademicRegistration() + ")");
+                    FileManager.saveBooks(getAllBooks()); // Salva o estado dos livros
+                    FileManager.saveStudents(getAllStudents()); // Salva o estado dos estudantes
                 } catch (IOException e) {
                     System.out.println("Erro ao registrar operação no log: " + e.getMessage());
                 }
@@ -102,6 +106,8 @@ public class LibraryManager {
                 try {
                     FileManager.logOperation("Devolução - Livro: " + book.getTitle() + " (Código: " + book.getCode() + 
                                           ") devolvido pelo estudante: " + student.getName() + " (RA: " + student.getAcademicRegistration() + ")");
+                    FileManager.saveBooks(getAllBooks()); // Salva o estado dos livros
+                    FileManager.saveStudents(getAllStudents()); // Salva o estado dos estudantes
                 } catch (IOException e) {
                     System.out.println("Erro ao registrar operação no log: " + e.getMessage());
                 }

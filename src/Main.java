@@ -290,11 +290,19 @@ public class Main {
 
     private static void loadData() {
         try {
-            libraryManager.addAllBooks(FileManager.loadBooks());
-            libraryManager.addAllStudents(FileManager.loadStudents());
+            List<Book> books = FileManager.loadBooks();
+            List<Student> students = FileManager.loadStudents();
+            
+            System.out.println("Carregando " + books.size() + " livros e " + students.size() + " estudantes...");
+            
+            libraryManager.clearAll(); // Limpa dados antigos
+            libraryManager.addAllBooks(books);
+            libraryManager.addAllStudents(students);
+            
             System.out.println("Dados carregados com sucesso!");
         } catch (Exception e) {
             System.out.println("Erro ao carregar os dados: " + e.getMessage());
+            e.printStackTrace(); // Isso vai nos ajudar a ver o erro completo
         }
     }
 
