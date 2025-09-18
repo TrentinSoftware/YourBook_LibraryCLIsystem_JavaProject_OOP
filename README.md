@@ -2,7 +2,7 @@
 
 Projeto da disciplina de Programação Orientada a Objetos da turma 2025.2
 
-Sistema de gerenciamento de biblioteca, desenvolvido em Java (JDK 21) com GUI Swing.
+Sistema de gerenciamento de biblioteca, desenvolvido em Java (JDK 21) em CLI.
 
 ### Equipe de desenvolvimento:
 
