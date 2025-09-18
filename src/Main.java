@@ -298,6 +298,7 @@ public class Main {
             libraryManager.clearAll(); // Limpa dados antigos
             libraryManager.addAllBooks(books);
             libraryManager.addAllStudents(students);
+            libraryManager.restoreBorrowedBooks(); // Restaura as relações de empréstimo
             
             System.out.println("Dados carregados com sucesso!");
         } catch (Exception e) {

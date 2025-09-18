@@ -139,4 +139,16 @@ public class LibraryManager {
             students.put(student.getAcademicRegistration(), student);
         }
     }
+
+    public void restoreBorrowedBooks() {
+        // Percorre todos os livros para restaurar as relações de empréstimo
+        for (Book book : books.values()) {
+            if (book.isBorrowed() && book.getBorrowedBy() != null) {
+                Student student = students.get(book.getBorrowedBy());
+                if (student != null) {
+                    student.getBorrowedBooks().add(book);
+                }
+            }
+        }
+    }
 }

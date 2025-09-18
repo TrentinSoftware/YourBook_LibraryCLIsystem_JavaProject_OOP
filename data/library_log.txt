@@ -5,3 +5,4 @@
 17/09/2025 23:06:54 - Adição de Estudante - Nome: Guilherme Trentin (RA: 15, Curso: Engenharia de Software) adicionado ao sistema
 17/09/2025 23:07:44 - Empréstimo - Livro: Percy Jackspm (Código: 1) emprestado para estudante: Guilherme Trentin (RA: 15)
 17/09/2025 23:08:04 - Devolução - Livro: Percy Jackspm (Código: 1) devolvido pelo estudante: Guilherme Trentin (RA: 15)
+17/09/2025 23:09:58 - Empréstimo - Livro: Percy Jackspm (Código: 1) emprestado para estudante: Guilherme Trentin (RA: 15)
